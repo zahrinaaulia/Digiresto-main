@@ -1,0 +1,812 @@
+version: "2.0"
+nlu:
+
+- intent: greet
+  examples: |
+    - Selamat Pagi
+    - Halo digiresto
+    - Halo kak
+    - Selamat siang kak mas
+    - digiresto
+    - halo
+    - Sis
+    - Selamat siang mau tny
+    - Hallo digiresto
+    - Siang admin
+    - Selamat siang
+    - Ka
+    - Hi
+    - Siang
+    - Pagi kak
+    - Hallo
+    - Pak
+    - Haloooooo
+    - Halo siang
+    - Halo selamat siang ka
+    - Sore Pak
+    - Malam kak
+    - digiresto halo
+    - Assalamualaikum
+    - Hallo 
+    - halo 
+    - Pagi
+    - Pagi Admin
+    - Sore
+    - Selamat Sore
+    - Sore Admin
+    - Malam
+    - Selamat Malam
+    - Malam Admin
+    - Hallo CS Digiresto
+    - Malam admin digiresto
+    - Halo Digi
+    - Pagi kak
+    - Selamat siang
+    - Sore kak
+    - Sore digiresto
+    - Malam Digi
+
+
+
+- intent: ask_package
+  examples: |
+    - Kmrn saya ada pesan ini utk lihat apakah pesanan saya di terima atau tidak bagaiman cara nya yah
+    - Mba Myla saya ada 3 order kapan dikirim
+    - Makanannya sudah sampe mana min
+    - Pesanan saya da diambil blm ya
+    - Blm d kirim y brgny
+    - Pesanan sy sdh diantar blm ya
+    - Bs tlg di cek ini sudah diantarkan atau blm
+    - Pesenan saya sudah jalan belum yaa kak
+    - Punya sy uda dkirim blm ya
+    - Skrg udh sampai mana ya kak
+    - Pesanan saya posisi dimana ya
+    - Sudah dmna ya
+    - Apakah sudah sampai kak
+    - Mau tanya pesanan saya kenapa sampe saat ini belum jalan ya
+    - Untuk pesanan saya sudah sampe mana ya saat ini Kira jam berapa sampenya
+    - Tlg dicek sdh sampai mana
+    - pesanan saya blm sampai bisa tlg dicek sdh smp mn
+    - Kpn sampenya
+    - Paket saya sudah dimna ya min
+    - Trs skr udah dmn
+    - Untuj ordernya sudha sampai mana ya
+    - Halosnack sy blm dkirim ya
+    - Mau tanya pesanan
+    - Kak uda dikirim blm y
+    - Apakah sdh dikirim
+    - Apakah paket sudah jalan
+    - K pesanan brg ini gmn y
+    - Bs d cek ada kirim atau tidak Agar sy ngk tungguin
+    - Ada dikirim ngk
+    - SOMDKWKR2LVT
+    - SODKWN5SZLZ ini ya kak
+    - Maaf utk orderan nya sdh dikirim blm ya
+    - apa pesanannya sudah diantarkan
+    - Apakah sudah sampai
+    - Ini sudah sampai mana yah
+    - Kira2 pesanan saya kapan dikirimnya
+    - Cek pesanan
+    - Siang mau tanya orderan saya yg SOMDKXYLAWQW untuk hari ini belum terima
+    - Siang mau tanya dong pesanan saya apakah sudah diantar
+    - Utk cek pemesanan sdh sampai dimana gmn caranya ya
+    - orderan katering saya kok sampai skrg blm diantar ya
+    - Hi kak ini sy order di digiresto kok blm dikirim jg ya
+    - Mau nanya status orderan syaa
+    - Blm dintar
+    - Bisa dicek udh sampe mana mas
+    - Saya mau Tanya pesanan saya statusnya apa y
+    - Sy mau menanyakan koq makanan siang yg di pesan belum sampai sekarang
+    - Mas orderan makanan saya sampai jam sekarang belom juga sampai ya masalahnya di aplikasi ga bisa tracking status makanan sampe mana
+    - Selamat siang pak Koq pesanan sy hingga sekarang blm sampe jg ya Sedangkan sy mau lihat di riwayat liading terus
+    - Terus ini saya mau cek pesanan makanan saya gimana kak
+    - Ini gmna
+    - Pesanan yg ini sdh dikirim jg blm ya
+    - SOMDKWM8VQMK
+    - Siang ka mau konfirmasi sudah dimana ya ka statusnya Terimakasih
+    - Paket sdh dikirim belum
+    - Status pengiriman nya bagaimana ya Apakah sudah di jasa pengiriman
+    - Pesanan saya sudah sampai mana ya
+    - No order nya SOMDKWNA6QOL
+    - Bagaimana statusnya
+
+
+- intent: response_affirm
+  examples: |
+    - Siap
+    - oke
+    - Sudah
+    - Baik
+    - ok
+    - iya
+    - Baiklah
+    - Cukup
+    - oh ok
+    - Ok trims ya
+    - sudah cukup kak
+    - siyap
+    - Sama2
+    - Ada 
+    - sudah min
+    - Ok d
+    - Udh
+    - Okeee
+    - Sudah kak
+    - Ok kak
+    - Baik kak
+    - Okay siap
+    - Y benar
+    - Ok sdh
+    - oke kak
+    - baik saya coba
+    - Iya kak
+    - Iya sdh ya
+    - Ya kak
+    - iya ok
+    - Sudah mbak
+    - Sdh ckup
+    - Ga ada kak
+    - Ok ka
+    - Ob saya
+    - Okee baik kak
+    - done
+    - iyaa benar
+    - Bisa
+    - oo ok
+    - betul
+    - O
+    - Baik kakak
+    - Sudah ka
+    - Sdh kak
+
+
+- intent: request
+  examples: |
+    - Bs minta tlg ditransfer ke rek sy
+    - Sy mau transfer kredit digi ke rek Bank Mandiri gimana caranya
+    - Saya mau Top Up Saldo Digiresto lewat BCA
+    - apa bisa ya ganti rekening 
+    - Ingin daftar
+    - D bantu trf balik aja klo memang ga bsa top up saldo
+    - apa bisa ya ganti rekening
+    - Mau ganti rekening ke BSI
+    - Mau ganti rekening yang terdaftar bagaimana
+    - apa bisa ya ganti rekening
+    - caranya transfer rekening gmna ya kak
+
+- intent: complain_dana
+  examples: |
+    - Selamat pagi digiresto mengenai laporan saya tgl 29 november tentang saldo saya yg berkurang namun order ter cancel sendiri sampai sekarang belum ada refund Mohon ditanggapi
+    - Sudah dan pembayaran saya lakukan melalui kredit card karena kmrn hanya itu yg saya bisa
+    - Dananya Belum Balik Kak
+    - Boleh dibantu kak refund ke rekening aja ya kak
+    - Aku cek ada di DIgicredit
+    - Sebenar nya saya sudah lapor dan akan di refund kata petugasnya namun hingga kini belum masuk saldo nya
+    - Apakah nanti akan ada info transaksi berhasil atau bagaimana kak Soalnya belum ada perubahan dr aplikasi digi atau notif bank
+    - Iya saya mau lakukan payment di gagal mulu dg cc mandiri
+    - Selamat siang barusan saya oder utk besok malam di geray Hok Ben yg pertama pembayaran pake shopee normal yg kedua potong koin Shope 5000 tapi bayarnya tetap ga motong koin shopee nya ya
+    - jika di cancel apakah gopay sy kbali
+    - Pagi kak mau konfirmasi isi saldo di digi credit
+    - Uang dana blm balik
+    - Barusan cek dana 50ribu belum masuk mau pesan makan ngk bisa
+    - kak saya sudah tf buat isi saldo tapi saldonya belom masuk
+    - Tranafer Saldo digiresto credit ke bank saya belum masuk sudah 1x24 jam
+    - koq saldo linkaja saya tidak kembali yah
+    - sry tny sedikit untuk pembyaran yg cancel masuk balik nya kmn ya klo boleh tau
+    - Uda pak kepotong gojeknya kok bs ya Sy masukin gopay 50000 kmrn psn bakmi udah dtg trus sy psn siomai blm dtg td sy psn bakpaou uang gopay aja sisa 20000 brarti dah kepotong dunk sm uang siomaynya
+    - Pulangin duitnya
+    - Disana hanya terbaca 2 pembelian sy melakukan pembayaran 3 x pembelian di menu waiting pun ada 3 pembeliantransaksi 291121
+    - Direfund saja bs
+    - Justru saya mau pesan tetapi saldo nya sudah tidak ada lalu pembelian nya juga cancel
+    - Mohon kk admin respon info nya sebab dari applikasi kepenuhan pengunjung tapi saldo saya terpotong
+    - Ini saya ada 2 pesanan cancel tapi kok saldo nya terpotong kk
+    - Status pembayarannya waiting
+    - Halo kak itu saya gagal terus pakai cc
+    - Kira2 berapa hari ya ka untuk refundnya
+    - Brp hari kerja untuk pengembalian saldo
+    - min ga bisa top up
+    - Sis sy mau tanya ini sy da bayar kok masi pending ya
+    - halo kak nomor order SODKWNIKMZF sudah dibayar tapi belum masuk kak
+    - Ini bukti bayar pesanan yg diterima baru 3
+    - Saya top up saldo sudah payment via BCA knp saldo digiresto saya belum masuk ya
+    - Tapi saldo digiresto saya tidak ada
+
+- intent: complain_makanan
+  examples: |
+    - foto kuahnya berserakan semua di plastik krn dalamnya tdk di lakban tutupnya jd tumpah semua sy blum buka paket makanannya sampe skrg
+    - Karna yang nerima atas nama dimas bilang ga ada
+    - Kmaren aja org mandiri gak makan siang gara2 ksalahan kalian Siapa yg salah Knp ke mandiri malah kirim ke rmh saya Pd ga bs baca atau gimana sy bingung sm kalian
+    - Orderan saya gad 1 ya
+    - Saya pesan 3 utk dibagikan ke org lain waktu buka kantong plastiknya saya cek dulu ternyata ada yg beda mohon info kenapa ya
+    - dos ini yang tengah cuma ada isi 2 pcs roti ya yang lain berisi 3pcs
+    - Saya belum terima saya tidak tahu siapa itu linda
+    - Makanan sy hari ini blm dateng 1 pax Dari ayam paha Cuma sy lupa catat no nya
+    - Kemarin saya ada 3 order dan sdh ada bukti bayarnya sukses terlampir tapi yg dikirim hny 2 Minta tolong dicek
+    - Yang baru saya terima cuma 2 kotak roti dari imperial bakery
+    - Pesanan berbeda sama pesanan yg telah di terima oleh nur
+    - Kurir datang untuk kunjungan menginformasikan bahwa makanan hilang dalam pengantaran Bagaimana jalan keluar dari digiresto
+    - Halo min sy pesan pesanan yang sama ada 4 tapi alamat pesanan yg ini salah tolong disamakan ya dengan yang lain
+    - saos sdh tumpah semua ke nasinya
+    - Tetapi sampe skrng makanannya blom ku trima
+    - Ada 1 makanan yg belum saya terima ka
+    - Jadi masih kurang 1 box
+    - kmrn sy order 3 yg 2 sdh sampai kurang 1 pesanan saya yg msh blm datang yg kmrn sy komplen itu
+    - Permasalahan saya yg kurang 1 gimana yah kak
+    - Ya pesenan mah sdh di terima mba tp kan kurang 1 mba
+    - Malam TDI saya dihub oleh pihak digiresto perihal makan yg kurang fresh Dan diminta utk mengirimkan bukti pembayaran
+    - Halo selamat siang Saya Tika Ayu Triana Lestari Tadi saya memesan 2 kali menu makan siang untuk besok di resto hokben akan tetapi di app digiresto saya pesanan terorder hanya 1 sedangkan saldo shoppe saya sudah berkurang
+    - Sudah tapi kurang satu pesanan utk Hokben
+    - Kurang 1
+    - Tp kurang 2
+    - Dan satu lg akhir ini paket yg kami terima diatas jam 1300 itu menu lsg kami foto sesaat kami buka menu tdk sesuai saos tumpah ruah semua ke ayam packing tidak rapat terbuka krn tdk diisolasi
+    - Min ini sering bangettttt lhooo berantakan tumpah gituu kurir nya sy tny alesannya dr pusat digiresto emang diterima nya ud spt itu min mknya sy pesen nya ud jarang2 yaa krn terima nya begituu muluuu jd ilfeel klo mau psn
+    - Sore Saya terima makanan dengan kondisi tumpah
+    - Makanan rasanya seperti ketumpahan kecap dan penyedap rasa
+    - Tumpah mas
+    - Iya tumpah kuahnya
+    - Tadi saya di tlp digiresto diminta kirim bukti bayar makanan saya yg tumpah
+    - Mbak mas sy ada pesan makanan ninety nine n dapur solo tolong dong klo anter makanan diperhatikan masa makanan sy berantakn sambalnya tumpah2 keluar
+    - Jg tlg ingo kokikit paket sll acak2an minyak tumpah diplastik jd risih pegangnya Tiap kali kokikit begini
+    - Datang jam 1630 belum dibuka Makanan tadi terdengar jatuh didepan rumah saat diantar kurir sehingga isinya tumpah seperti digambar 082298682799
+    - Dr kmren pesen selalu aman hari ini packing kurang rapih Sehingga saos mayonesnya tumpah
+    - Tolong dong kak untuk pengemasan yg kokipit blgn resto nya biar lbh baik lg ini minyak smua tumpah
+    - Yg kuah atau berminyak bumbu gitu bagusnya masuk plastik kecil biar diperjalanan ga tumpah terus
+    - Sama kyk street sushie kecap nya selalu tumpah
+    - Sampai jam 1545 dibuka 1549 kuah makanan tumpah rembes semua berantakan kemana mana 082298682799
+    - Ini yg terkirim hari ini dan dalam keadaan rusak juga
+    - Sudah dianter Kak Tapi barusan menu nya rusak
+    - kekurangan hanya dalam keadaan rusak kak dan ini saya foto msh didalam plastik
+    - Saya trima packaging rusak
+    - Krn ditinggal di luar resiko basi dan rusak kena mataharo
+    - Kotaknya juga sobek seperti yg saya infokan
+    - Kotaknya sobek
+    - Maaf kak jadi bagaimana solusinya Pesanan saya tidak sesuai dengan apa yang saya pesan
+
+- intent: chitchat
+  examples: |
+    - Sampe sekarang belum datang
+    - Belum datang
+    - Saya ko blm terima makananya
+    - Langsung antar
+    - Tolong bisa dikirim lebih cepat kak
+    - Sudah dikirim blom ya kak
+    - Tlg bilangin ya cepetan ya
+    - Karena pesanan sudah mau jam 12 belum datang
+    - Tolong diinfo secepatnya ya
+    - Maaf saya lg tunggu pesanankoq blm datang
+    - Bisa dicek ga ya sampai mana
+    - Saya udah lapar ini
+    - Udah itu aja yang penting cepetan makanan saya sampe kapan
+    - Koq blm diproses y
+    - Pesanan nya blum sampe
+    - Skrg sdh mau jam 1 ya
+    - Belum sampai kak sampe sekarang
+    - Nanti akan saya update lagi jika jam 1 belum terima pesanan
+    - Koq blm sampe jg ya
+    - Sampai sekarang pesanan saya belum tiba
+    - Busyet deh Itu sich sdh lewat dr jam makan siang
+    - Sudah saya masih menunggu kurirnua
+    - Sdh setengah satu
+    - Koq pesanan belum samoe
+    - Laperrr nih
+    - Lama yabiasa cepat
+    - Msh blm sampe
+    - Saya ada pesan makanan tapi belum sampai ya
+    - tolong segera ya
+    - Ini saja dulu tolong di selesaikan
+    - Kamu lama balas chat sy karna km lagi mkn siang juga kan Knp km ga makan jam 1 siang aja sesuai kata2 km tadi
+    - Sl nya yg lain udh sampe
+    - Padahal jam kirim dari jam 9 12
+    - Sampai sekarang masih belum terima
+    - Blm sampai
+    - secepatnya ya kak ini untuk makan siang soalnya
+    - Knp pesanan sya blm dtg ya
+    - Kelamaan
+    - sampai skg blm diantar
+    - Bilangin suruh cepetan da lapar bgt
+    - Ini knp blm dikirim ya
+    - Sya pesan makan siang 3 Br datang 2 saja 
+    - Di aplikasi katanya jam pengantaran dari 9001200 tapi sampai sekarang masih blm diantar
+    - Aduh lama bgt ya
+    - Lunch blm sampe
+    - Blm sampe
+    - Kenapa skrg selalu ngaret yaa
+    - Ini koq orderan saya blm sampe yaa
+    - Makannanya belum sampai juga
+    - Qo maksimal jam 7 si
+    - Minta tlg diproses ya kak
+    - Oh ok ka soalnya diaplikasi sampe jam 1800 takut kelewat ga dikirim
+    - Tp sampai skrg yg siang blm samapai ya
+    - Makanan saya knp belum tiba jg ya
+    - Ingin tanya pesanan saya sampai skrng kenapa masih belum sampai ya Padahal saya pesan untuk makan siang
+    - Untuk pesan makan siang kokipit hari ini koq belum diantar ya
+    - Makanan saya belum datang
+    - ini sudah mau jam 1 dan belum ada info pengantaran
+    - Orderan belum sampai
+    - Kak makanan saya hari ini belum datang
+
+
+- intent: ask_help
+  examples: |
+    - Bgmn caranyam
+    - Maksudny apa ya
+    - Kurang paham saya
+    - Mksdnya gmana yya
+    - Gimana
+    - Mau tanya
+    - Kakmo tanya
+    - kak mau tanya ka
+    - Mau tanya dong
+    - Bagaimana ini
+    - jadi bagaimana ka
+    - maka nya saya bingung gak ada terhubung
+    - Kenapa ya
+    - Mau tanya ka
+    - Kak saya mau tanya
+    - Gmn ni
+    - ka aku mau tanya
+    - Hallo saya mau tanya
+    - Saya mau tanya
+    - Maaf sebelumnya kak
+    - Ka ingin tanya lg
+    - Yg ini gymana
+
+
+- intent: request_change_information
+  examples: |
+    - kak saya ingin tanya kmrn saya daftar digiresto kak cuma mau ganti nomer hp nya kak krn nomer yg saya daftarkan jarang aktiv ternyata kak
+    - alamat bener nya Cluster Aryana Flora Blok E10 no 41
+    - Bisakah saya merubah alamat pengantaran
+    - RT nya juga salah hrsnya RT 14 bukan 5
+    - Harusnya no 50 tp di current location nomer 21 Mau ganti nomer sj Mbak
+    - Saya salah set alamat
+    - Alamatnya apakah bisa di ganti
+    - Lupa ganti alamat rumah
+    - Sepertinya tadi saya salah memasukkan alamat
+    - Saya mau ubah alamat kirim bs ga ya Untuk besok
+    - 2 pesanan ini mau ubah alamat nyaa
+    - Kak ini bisa rubah alamat kirim nya ga
+    - Gabisa diubah aja ya alamatnya
+    - Jadi maksud Dari kalian bahwa nanti sewaktu kurir mau pengantaran nya Bilang dengan kurir bahwa alamat Salah Minta digantikan
+    - Ini alamatnya bisa di ganti tdk kak
+    - Bener ke2 alamat digantikan Ke alamat Jl Kebun Jeruk XVIII No57 RT02 RW09 Mampar Kota Jakarta Barat Novita Sari 6282237375798
+    - Alamat nya bisa dirubah tidak
+    - Mohon info cara menghapus akun dan detail email no hp dr digiresto
+    - Saya salah masukin alamat nya
+    - Hai kak bisa dibantu mengisi data dibawah ini kak Nomor telepon di akun digiresto 081291489896 email lawrenstaminayahoocom terima kasih
+    - kalau alamatnya bisa di ganti kah
+    - bisa diubah utk delivnya ke jl kebon kacang 29 no 6
+    - saya salah kasih alamat
+    - Salah alamat kak
+    - Saya input ke alamat mana yah min
+    - Apa bisa ganti alamat kk Maap saya salah pilih
+    - Maaf kalau mau ganti alamatnya gmn ya
+    - Alamatnya BS d ubah GK ya ka
+    - Ya salah cantumin alamat
+    - Boleh ganti alamat pengiriman gak
+    - Ya ni kan buat bsk bisa ga dirubah alamat
+    - Kalau ingin mengubah alamat pemesanan bagaimana ya kak
+    - Saya ingin tanya klo mau ubah alamat pesanan di aplikasi digiresto bagaimana ya Saya tdk bisa membatalkan pemesanannya
+    - Bolehkah ganti alamat
+    - Saya mau ganti alamat min Bisa gaksoalny salah alamat
+
+
+- intent: cancel_order
+  examples: |
+    - Hallo Retno saya ingin menanyakan perihal orderan yg dibatalkan
+    - untuk cancel bagaimana tehnis nya kak
+    - Apa pesanan saya bisa di cancel untuk code resi SOMDKXV84P74
+    - Tolong dibatalin krn saya salah alamat
+    - Saya mau cancel
+    - Gimana cara batalin salah alamat   
+    - Malam kak saya ingin membatalkan transaksi yg diantar pada hari senin dikarenakan baru lihat jadwal klo hari senin jadwal libur dan akan order kembali dihari selasaada 3 pesanan yg dikirim ke kantor bisakah membantu saya Terimakasih
+    - Yaudah deh saya cancle aja
+    - tinggal yang ini yg belum ter cancel ya
+    - Mba kok ga bisa di cancel yaa
+    - ya saya mau cancel ya
+    - Ok cancel
+    - Iya batalkan saja dibantu saya akan pesan ulang lagi
+    - Iya saya batalkan aja semua pesanan saya
+    - Mohon dibatalkan ya kak
+    - Saya mau cancel dl ganti untuk ganti alamatnya
+    - Mau batalkan pesanan
+    - Siang kak saya mau batalkan pesanan mengubah pembayaran dari shopepay ke digiresto
+    - Saya mau batalkan transaksi
+    - Gan sy mau batalkan orderan bisa Karna salah alamat
+    - ka saya mau batalkan pesanan ini krn mau ganti menu bisa
+    - Mau batalkan transaksi ini dong kak
+    - saya mau batalkan pesanan ini ya
+    - Saya mau batalkan pesanan dong mba
+    - Siang saya mau batalkan orderan saya
+    - Saya mau batalkan sajanya
+    - Saya mau batalkan pesanan saya ini apakah bisa
+    - haloo sy mau batalkan
+    - Min saya mau batalkan ini bisa
+    - Mau cancel orderan ini karena mesennya double gimana y
+    - Maap kak aku mau cancel orderan ini
+    - Sy mau cancel order krn salah pilih tanggal
+    - Saya mau cancel orderan
+    - Saya mau cancel orderan untuk hari jumat
+    - Cancel order
+    - Min saya mau cancel order untuk besok
+    - Mo cancel orderan
+    - Cara cancel orderan gimana ya ka Saya salah alamat
+    - sore maaf mau cancel order ini krn mau ganti resto
+    - Aku mau cancel orderan untuk hari senin besok
+    - Mohon maaf kak saya cancel order karena pesanan salah hari
+    - Saya mau cancel orderan untuk hsri senin 7 feb yg breakfast sm lunch ya
+    - Sy melakukan cancel order untuk
+    - Saya mau cancel order ini bagaimana
+    - Sy mau cancel orderan sy yg buat rabu krn sy gk jd msk
+    - Maaf sy ingim cancel order tsb karena alamat penerimanya salah
+
+- intent: response_unhappy
+  examples: |
+    - Dan penerima asal Terima saja
+    - Slow respon banget nih
+    - Kecewa bgt jadinya
+    - Kok saya yg customer yg jadi repot sedangkn saya sudah ikuti aturan digiresto
+    - Ga sesuai estimasi
+    - Ko telat
+    - Rugi dong saya
+    - Giliran gw balas lama lu komplain Ga jlas
+    - Enak aja lu Balas gw lama2
+    - Bikin org emosi jiwa
+    - Gak ush sok membela restoran itu
+    - Sjak kapan makan siang jam 1
+    - Kalo keteteran gak ush sok sokan diskon
+    - Km bs baca gak
+    - Siapa bilang ya jam 1300 Km yg ngarang
+    - Org bisa mati kelaparan tgguin pengiriman kalian
+    - Kenapa sih tiap hari hrs sy urusin pengiriman makanan di digiresto Cape ya
+    - Nunggu kyk gini da mati kelaparan
+    - Sy mau HAPUS PERMANENT
+    - CS tidak membantu
+    - Msh blg gak ada respon
+    - Et dah
+    - Repot ya tdk simple
+    - Aduh ya ampun
+    - Jgn customer komplan Malah harus jelasin panjang lebar
+
+- intent: ask_courier
+  examples: |
+    - Takutnya kurir gak konfirmasi langsung antar aja
+    - Tracking driver sdh dmn blm ada di aplikasi ya kak
+    - Bisa minta nomor telpon kurirnya
+    - Boleh info ke kurirmya kak
+    - Sudah dmn kurir ny
+    - Boleh minta no drivernya
+    - Bukannya jalur yg ke jakarta pusat pak Nur yg antar
+    - Untuk kurirnya ngga Ada yang free delivery ya min
+    - Di grabfood atau gofood
+    - BLH minta no TLP kurirnya
+    - Iya kak mohon besok di infokan kepada kurir nya ya kak
+    - Pakai kurir apa ya
+    - Ada nomer kurir nya mbk
+    - Ka untuk ini tolong infoin ke kurir pengantarannya di gedung sicepat kaca ya
+    - Bisa minta dibantu no kontak kurir nya SB sampai skr blm sampai juga makanan nya
+    - halo kak iya minta tolong nanti dibantu sampai kan aja ke kurir nya biar bsk saya bisa info lokasi nya
+    - Saya minta diganti kurir
+    - Apakah tidak ada nama kurir yg mengantar kak Karena biasanya di sistem tracking sicepat itu ada
+    - kira kalau kaya gini blh minta nomer kurirnya gk
+    - tolong hub kurirnya ya jadi dikirim atau tidak
+    - Nanti abang kurirnya Nelpon ga ka
+    - Untuk janjian ambilnya nanti apakah kurir akan kontak saya
+    - Apa ada nomer kurir nya
+    - ada nomor kurir yang bisa dihubungi
+    - apakah bisa di cek kurir sudah sampai dimana
+    - Sudah dimana ya kurirnya
+    - bisa saya minta nomor kurir nya kak
+    - Bisa tau no telp kurir yg antar
+    - Bisa tlg cek ke kurir nya
+    - Apa kurir nya bisa di call kak
+    - Bisa keliatan posisi kurir sudah sampai mana
+    - untuk no kurir yg antar apa bisa saya dapatkan
+    - ini kurir nya sdh dimana
+
+
+- intent: confirmed_food_arrived
+  examples: |
+    - Makanannya baru sampe Makasih
+    - ok barusan sdh saya terima thx
+    - Sampe sampe
+    - Makanannya sudah sampe ya min
+    - Thx sudah kami terima semuanya
+    - ok pesanan sy sdh dtg
+    - Eh ini udah terima maksudnya gada yg perlu dibantu lg
+    - Pesanan sudah diterima
+    - Makanan SDH dtg
+    - sudah datang lagi sisanya terima kasih ya
+    - sudah saya terima udah pesanannya terima kasih
+    - Sudah sampai makanannya
+    - Udah ka Udah sampw juga
+    - Halo kak sdh sampai
+    - Iya admin sudah sampai dengan baik dan sesuai pesanan Terimakasih
+    - Iya admin mohon maaf sudah sampai ini ternyata
+    - Sudah diterima
+    - Pesanannya sudah diterima Kak Terima kasih
+    - saya barusan sudah tlp rumah sudah diterima ya
+    - cukup pesanan sudah diterima trims
+    - Makananaya sudah datang terimakasih
+    - Sudah datang kak pas jm 1
+    - baik karena saya ada 8 pesanan ke alamat yg sama yg 7 sudah datang
+    - sudah datang kak makanannya
+    - Sudah datang makasih
+    - ok sudah datang
+    - Makasih min tadi pesanannya sudah datang
+    - Paketnya sudah datang kak Terimakasih
+    - Sudah datang kak kurir nya Makasih ya
+    - Sudah datang barusan
+    - Terimakasih sudah datang
+    - Tidak kak sudah datang barusan trima kasih  
+
+- intent: promo
+  examples: |
+    - Jd kalau belanja pakai mandiri 40rb akan dpt cash back 40rb juga berupa digi credit ya
+    - Mau nanya itu ada yang cash back 100 T n c nya apa ya
+    - Mau tanya untuk bulan ini apakah ada promo Desember kan ada voucher mandiri
+    - Mau tny skrg ud ga ad promo mandiri y
+    - Baik ka apa tiap hari merchan yg promo selalu sama atau beda
+    - Mau tanya promo digiresto yg domino pizza buy 1 get 1 msh ada ngga ya
+    - Menu promonya yg mana y Karena cuman ada yg ini aja
+    - Ini promo by 1 get 1 msh ada ga
+    - Maaf mau tanya yang makanan promo 10k menggunakan vocher shopeepay itu khusus yang buat orang isoman atau umum ya kak
+    - Sebenernya aku cuma pgn nanya sih kalo hokubee combo itu bisa di pesen di grabfoodgofood ga Atau kalo via web gitu ga ada menu hokubee combo
+    - Saya ingin tanya festival nasional cashback 100 maksudnya bagaimana ya
+    - Hai Ada cashback 100cara pakai nya bgmn ya
+    - oh iya supaya bisa dapat promo tersebut harus menggunakan payment apa ya
+    - mau tanya untuk promo cashback 100 itu bisa digunakan berapa kali dalam 1 akun ya
+    - Wahh ga ngerti masa kita dpt cashback 100 misalnya beli makanan 33rb Cback brp Ke no hp maksudnya Ke digiresto utk kita beli lg besok2
+    - Hi sore ada aplikasi baru diskon nasional spt apa Cashback 100 maksudnya
+    - kak mau tanya cashback 100 persen
+    - Min festival cashback 100 cara gunakannya gmn 6
+    - jika menggunakan 2 akun berbeda namun 1 kartu debit apakah kedua akun bisa mendapat promo
+    - Ini maksudnya apa yg no3 kemana cash back nya Ke rekening apa Ke gopay Ovo Digicredit itu apa
+    - Apakah dapat Disc bila gunakan debit Mandiri
+    - Untuk birthday apa masih free steak di holycow
+    - Promonya berlaku sampe kapan kadan cashback nya ada expirednya ga
+    - Itu langsung potongan atau cashback ya
+    - Ini vouchernya kak tp vouchernya tidak ditemukan
+    - Dan gmn cara mendapatkan cashback 100
+    - Hallo saya mau nanya festival diskon nasional cashback 100 itu apa ya
+    - Selamat siang mau tanya sy dpt vocer itu gmn cara pakainya ya
+    - Kl untuk cashback ke digicreditnya bisa kita pakai sampe kapan kak ada expirednya ga
+    - Cara pakai voucher cshbck gmn ya
+
+- intent: deny
+  examples: |
+    - Tidak
+    - Jangan dong
+    - Tdk ada kak
+    - tdk ada
+    - Belum
+    - Belum terima
+    - Tapi tidak bisa
+    - Tdk
+    - enggak
+    - ga puas
+    - tidak puas
+    - engga puas
+    - kagak
+    - gg pernah
+    - ngga sih
+    - Belum cukup
+    - tidak ada kak
+    - ta
+    - ga ada kak
+    - blm
+    - belum ada ka
+    - tiada
+    - Itu aja kak
+    - ga jelas
+    - ga ngerti
+    - ga paham
+    - tidak faham
+    - gaje
+    - blom jelas juga
+    - blom jelas
+    - belom
+    - wah ga jelas nih
+    - kurang puas
+    - blom
+    - gaboleh
+    - belom punya
+    - apasih ga jelas
+    - engga
+
+
+- intent: inform_data
+  examples: |
+    - Nomor Rekening 1340005757512 Nama Bank Bank Mandiri Nama Pemilik Rekening Mochamad Alip Nominal 72500 No telp akun digiresto 082121737370 terima kasih
+    - 87788624226
+    - Mega 089638221551 10000 089612033126 Kokikit SODKWLGLFXE
+    - Jakarta selatan
+    - Bank BCA 0661357583 Muhammad aditya Rp 20000 081296619961 674 Bukti transfer terlampir
+    - KK BANK MANDIRI NO 4149313000301268 HENDRA LI KURNIAWAN Rp 6500 08118003501 Bukti transfer yg sdh sy kirim diatas
+    - Nama bank mandiri No rek 1170005489497 Nominal 6500 No akun apa Nama merchant bakmi naga
+    - Nama Anthony Mesakh Nomor 083813384129 Nama Pemilik Anthony Mesakh Nominal 10000 Nomor Akun 083813384129 Nama Merchant Digiresto
+    - Nama Anthony Mesakh
+    - Yuly hp 085710499899
+    - Alamat pengiriman Jl Hemat no35 ya
+    - berikut alamat lengkap dikirim Kepada Sarah Semelati The Kuningan Place Jalan Kuningan Utama Lot 15 Kel Menteng Atas Kec Setiabudi RT7RW1 Menteng Atas Kecamatan Setiabudi Kota Jakarta Selatan Daerah Khusus Ibukota Jakarta 12960
+    - Bank BCA Nomor rekning 8420949368 nama pemilik Irvan Padilah Saputra Nominal 140000 Nomor HP 083824413886 Bukti transfer sudah terlampir
+    - Baik kak untuk alamat yg benernya di PT Navios evolusi solusindo jl Sumur baru IV Blok B No 910
+    - Gedung sicepat yang kaca ka yang wisma 18
+    - 081807137255
+    - Nama Bank bca Nomor Rekening 0030075366 Nama Pemilik Rekening fransisca Nominal 100000 Nomor telepon akun yang terdaftar 081294533399 Nama Merchant Receipt Code Kode Unik 100954
+    - 087884450563
+    - BCA 8400183130 Aan Kurniasih 40023 Tlp 089530720282
+    - 08161676782
+    - 087881650409
+    - Nomor telepon akun yg terdaftar 085871953532
+    - Nama pemilik shoppe pay venny555
+    - Nomor shoppe pay 085871953532
+    - No rek 1985187798 081387987979
+    - Rekening nya atas nama seriulina
+    - 081930817920
+    - 081282702381
+    - No hp 082113487110
+
+
+- intent: payment
+  examples: |
+    - Ini dikembalikan dalam bentuk credit or gmb
+    - cara menghubungkan akun ovo dengan akun digiresto gmn
+    - jd untuk terhubung ke ovo gmn cara nya
+    - Ini cara pembayarannya gmn ya mas
+    - Harus pakai credit card aja kan
+    - Saya mau payment kok ga bisa ya
+    - Gimn caranya pembayaran via Debit online
+    - DEBIT ONLINE bank apa saja
+    - Pembyran via debit Mandiri apa bisa
+    - Kl byr selain pake mandiri min belanja brp ka
+
+- intent: ask_estimate
+  examples: |
+    - Terus untuk wktnya smpai jam berapa sy mesti tunggu
+    - Estimasinya dong ka
+    - Duedate sya dpt jawabannya estimasinya berapa lama
+    - Tp disini pengantaran estimasi nya seperti ini
+    - ada estimasi ga
+    - Perkiraan jam brp ya
+    - maksimal berapa yah kak
+    - Apakah pengiriman bisa sebelum stgh 5
+    - Ka ini kok pesanannya belum sampai ya
+    - Pesanan saya kenapa blm sampai ya
+    - Knp blom diantar yaa
+    - Ini estimasi sampai jam brp ka
+    - Ini dikirim jam brp ya estimasi sampai jam 1 tp smp sekarang blum dateng juga
+    - Estimasi sampai jm brapa
+    - Baik estimasi sampai jam 2 ya kak
+    - Mau tanya pesanan saya kapan sampai
+    - Saya mau tanya pesanan sy ini kapan sampainya yah
+    - Dikirim kapan sampai kesino
+    - Yg penting kapan sampainya
+    - Kapan sampai nya mba
+    - Perkiraan sampai nya jam brp yah
+    - perkiraan berapa lama ya
+    - Kira estimasi sampai kapan kak
+  
+
+- intent: response_wait
+  examples: |
+    - Ok saya tunggu
+    - Ok saya tungguterimakasih
+    - Baik saya tunggu kepastian pembatalan suksesnya
+    - ok Tkasih byk ditunggu kabarnya
+    - Baik saya tunggu
+    - Baik ditunggu ya kak karena sy sudah pesan lg
+    - Sementara cukup menunggu update
+    - Sedang di cari dulu
+    - Blm min masih di cari Nanti saya kabari lagi
+    - Baik saya tunggu itikad baik nya secepatnya
+    - Ok dtunggu
+    - Baik ditunggu bsk
+    - Oke sy tunggu secepatnya ya
+    - Saya tunggu
+    - Ditunggu ya kak
+    - Itu saja Saya tunggu pesanan yg blm dikirim ya Makasi
+    - Ok sy tunggu besok
+    - Ok terima kasih ditunggu
+    - Oke ditunggu ya Makasi
+    - Kalau sudah sampai kabari ya kak
+    - Ya mungkin menunggu info lebih lanjut aja kak
+    - Ditunggu kabarnya
+    - Ditunggu kabarnya gimana
+    - Ok ditunggu kabarnya tq
+    - Baik ditunggu kabarnya
+    - Baik ditunggu kabarnya segera ya
+    - Baik ditunggu kabarnya Terima kasih
+    - Baik saya tunggu
+    - ok sy tunggu tim terkait
+    - sy tunggu info ttg update ini
+
+
+- intent: goodbye
+  examples: |
+    - Tidak ada Terima kasih
+    - Baik kak mohon dibantu ya terimakasih
+    - Sekian terima kasih
+    - Iya terima kasih y
+    - Tidak terima kasih
+    - Terima kasih infonya cs
+    - makasih ka
+    - Makasi
+    - oke terima kasih
+    - Owhhhok coba sy cek trimakasii ya
+    - siapppp mksh
+    - Km tunggu infonya ya
+    - Terimakasih infonya
+    - Ok thanx infony
+    - Tidak Mksiii
+    - Ok makasih bantuannya
+    - Oke terimakasih
+    - sudah thanks
+    - Terimakasih kak
+    - Baik terimakasih
+    - Sdh cukup trims
+    - sudah tidak ada
+    - terima kasih banyak ya 
+    - Tq paa
+    - terima kasih ya
+    - Oke siap terimakasih kembali
+    - Oke makasih kak
+    - Sudah terimakasih
+    - Tidak mkasih
+    - Sudah saya belanja kan lagi terimakasih
+    - Terimakasih
+    - Ok thks
+    - Iya sudah sesuai
+    - Tidak kak terimakasih
+    - Tidak ada kak Terima kasih
+    - Y makasih mbak yg soleha
+    - Ok terima kasih
+    - Ok makasi
+    - Tidak terima oasih
+    - Baik Kak Terima kasih infonya
+    - Terimakasih ya kak
+    - Ok kak terimakasih
+    - Oh oke deh mksh ya
+    - Ok Terimakasih kak
+    - Tdk ada Terimakasih
+    - Terima kasih
+    - Baik makasih
+    - Sementara itu dulu Terimakasih
+    - Baik terima kasih
+    - Tdk tks
+    - eh iya min sudah ada terima kasih
+    - Iya terima kasih saya sudah lapar mba tunggunya lama
+    - thx bantuan nya
+    - Ok terima ksh
+    - Sudah mas terima kasih
+    - Sementara ini sdh Terima kasih digiresto Keep the good work
+    - Ok baik Terima kasih
+    - Terima kasih
+    - Baik sya tunggu ya Utk saat ini belum sya konfirmasi selesai Di tunggu solusi terbaiknya Terima kasih
+    - Tq
+    - Tdl trimksh
+    - tidak ada Tks
+    - Terima kasih info nya
+    - Ok Terima kasih atas informasinya
+    - Sdh kak terimakasih
+    - tidak ada
+    - Ok thx
+    - oke thanks 
+    - Ok tq 
+    - Ok Tks 
+    - Thanks
+    
+
+
+yang salah :
+- Cukup
+- Belum kak
+- Sudah cukup
+- Ok
+- Tdk
+- Tidak ad kak
+- Tidak kak sudah semua
+- sudah beres semua
+- sdh cukup makasih ya
+- Saya sudah coba tapi tidak terdapat voucher diskon
+- Ini yg kedai cendol yg blm datang kl serabi nya sudah datang

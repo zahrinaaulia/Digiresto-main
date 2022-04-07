@@ -1,0 +1,75 @@
+version: "2.0"
+
+intents:
+  - greet
+  - response_affirm 
+  - ask_package
+  - request 
+  - complain_dana 
+  - complain_makanan 
+  - chitchat
+  - ask_help
+  - request_change_information 
+  - cancel_order
+  - response_unhappy 
+  - ask_courier 
+  - confirmed_food_arrived
+  - promo
+  - deny 
+  - inform_data
+  - payment 
+  - ask_estimate
+  - response_wait
+  - goodbye 
+  - EXTERNAL_ticket_reminder:
+    use_entities: true
+  - EXTERNAL_ticket_reminder_user_satisfaction:
+    use_entities: true
+
+entities:
+- rc
+
+slots:
+  a_rc:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+
+forms:
+  open_rc_form:
+    a_rc:
+    - entity: rc
+      type: from_entity 
+e2e_actions: []
+
+
+responses:
+  utter_greet:
+  - text: " Hai kak, dengan Digiresto. Ada yang bisa kami bantu?"
+
+  utter_complaint:
+  - text: ""
+
+  utter_request:
+  - text: ""
+
+  utter_confirmed_food_arrived:
+  text: ""
+
+  utter_ask_a_rc:
+  - text: ""
+
+  utter_chitchat:
+  - text: ""
+
+action:
+- action_send_rc_form
+- action_set_reminder_usat
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,19 @@
+version: "2.0"
+
+rules:
+
+- rules: greeting
+  steps:
+  - intent: greet
+  - action: utter_greet 
+
+# greet kebaca greet (mid atau diakhir pake ask_help)
+
+
+  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+    steps:
+    - intent: nlu_fallback
+    - action: action_forget_reminders
+    - action: action_handover
+
+

@@ -1,0 +1,151 @@
+version: "2.0"
+
+  # - greet
+  # - response_affirm 
+  # - ask_package
+  # - request 
+  # - complain_dana 
+  # - complain_makanan 
+  # - chitchat
+  # - ask_help
+  # - request_change_information 
+  # - cancel_order
+  # - response_unhappy 
+  # - ask_courier 
+  # - confirmed_food_arrived
+  # - promo
+  # - deny 
+  # - inform_data
+  # - payment 
+  # - ask_estimate
+  # - response_wait
+  # - goodbye 
+  
+
+stories:
+
+# - story: nothing affirm (response only)
+#   steps:
+#   - intent: response_affirm
+#   - action: action_listen
+#   - intent: response_affirm
+#   - action: action_listen
+
+# response affirm diawal jadi apa, tengah, (akhir -> di goodbye)
+
+# response goodbye 
+
+# ask help diawal jawabannya greet, kalo ditengah dan diakhir jawabannya utter_ask_help 
+
+# chitchat precede (udah tanya ask package dan chitchat precede)
+
+# request change information (general form) akan dihandover (dia minta perubahann, minta alamatnya, akan di jawab apapun sama user nanti di handover)(tidak perlu rc dulu)
+# Cancel order dan response unhappy akan di handover check 
+# nlu fallback di handover 
+# ask courier (bisa di handover atau bisa di handle)
+# intent deny berarti harus di handover,
+# KPL belum ada 
+# promo dan payment (dijawaban dengan agent dengan general wording)
+# response wait -> utter chitchat precede
+# ask estimate di awal ditanya nomor resinya, estimate di akhir bakalan di handover 
+#ada kemungkinan chitchat diawal 
+
+- story: nothing affirm (response only)
+  steps:
+  - intent: response_affirm
+  - action: action_listen
+  - intent: response_affirm
+  - action: action_listen
+
+
+- story: ask package
+  steps:
+  - intent: ask_package
+  - action: open_rc_form
+  - active_loop: open_rc_form
+  - active_loop: null 
+  - action: action_send_rc_form
+  - action: action_set_reminder_usat
+  - checkpoint: user_satisfaction_check
+
+- story: complaint 
+  steps:
+  - or:
+    - intent: complain_dana
+    - intent: complain_makanan
+  - action: utter_complaint
+  - action: action_set_reminder_usat
+  - checkpoint: user_satisfaction_check
+
+- story: request
+  steps:
+  - intent: request
+  - action: utter_request
+  - action: action_set_reminder_usat
+  - checkpoint: user_satisfaction_check
+
+- story: confirmed_food_arrived
+  steps:
+  - intent: confirmed_food_arrived
+  - action: utter_confirmed_food_arrived
+  - action: utter_goodbye
+  - action : action_close_ticket 
+  - checkpoint: user_satisfaction_check
+
+- story: chitchat in the begining 
+  steps:
+  - intent: chitchat
+  - action: utter_ask_a_rc
+  - intent: ask_package
+  - action: open_rc_form
+  - active_loop: open_rc_form
+  - active_loop: null
+  - action: action_send_rc_form
+  - action: action_set_reminder_usat
+  - checkpoint: user_satisfaction_check
+
+- story: cancel order and response_unhappy
+  steps:
+    - or:
+      - intent: cancel_order
+      - intent: response_unhappy
+    - action: action_forget_reminders
+    - action: action_handover
+
+- story: chitchat precede 
+  steps:
+  - intent: ask_package
+  - action: open_rc_form
+  - active_loop: open_rc_form 
+  - active_loop: null 
+  - action: action_send_rc_form
+  - intent: chitchat
+  - action: utter_chitchat
+  - action: action_set_reminder_usat
+  - checkpoint: user_satisfaction_check
+
+- story: ask_etimate_begining 
+  steps:
+  - intent: ask_estimate
+  - action: utter_ask_a_rc
+  - intent: ask_package
+  - action: open_rc_form
+  - active_loop: open_rc_form
+  - active_loop: null
+  - action: action_send_rc_form
+  - checkpoint: user_satisfaction_check
+
+# - story: ask_estimate
+#   steps:
+#   - checkpoint:
+
+
+# - story: complain_dana
+#   steps:
+#   - intent: complain_dana
+#   - action: utter_complaint
+
+# - story: complain_makanan
+#   steps:
+#   - intent: complain_makanan
+#   - action: utter_complaint
